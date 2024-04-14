@@ -2,114 +2,34 @@
   box-sizing: border-box;
 }
 
-html {
-  --main-blue-color: hsl(224deg 89.11% 60.39%);
-  --user-photo-size: 100px;
+/* ----- flex-container ----- */
+section {
+  /* common css */
+  border: 2px solid green;
+  padding: 5px;
+  /* flex-properties */
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 
-body {
-  font-family: sans-serif;
-  background-color: antiquewhite;
-  text-align: center;
+/* ----- flex-child ----- */
+div {
+  /* common css */
+  border: 2px solid blue;
+  padding: 5px;
+
+  /* flex-properties */
 }
 
-.user-card {
-  margin: 20px auto;
-  max-width: 350px;
-  width: 100%;
-  min-width: 250px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 0 5px gray;
-  overflow: hidden;
+.Logo {
+  margin-right: auto;
 }
 
-.blue-bg {
-  background-color: var(--main-blue-color);
-  height: var(--user-photo-size);
-}
-
-.user-photo-wrapper {
-  width: var(--user-photo-size);
-  height: var(--user-photo-size);
-  border-radius: 50%;
-  margin-top: calc(var(--user-photo-size) * -3 / 4);
-  overflow: hidden;
-  border: 2px var(--main-blue-color) solid;
-  display: inline-block;
-}
-
-.user-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px hsl(180deg 100% 98.43%) solid;
-}
-
-.content-conteiner {
-  padding: 0 20px 15px;
-}
-
-h2,
-p,
-.links-containers,
-.button-container {
-  margin-bottom: 1em;
-}
-
-.social-link {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  padding: 7px;
-  border-radius: 50%;
-  color: white;
-}
-
-.fb-link {
-  background-color: #3d69af;
-}
-
-.tw-link {
-  background-color: #1da1f2;
-}
-
-.inst-link {
-  background-color: #e82f6e;
-}
-
-.youtube-link {
-  background-color: #fe0400;
-}
-
-.social-link + .social-link {
+/* div + div {
   margin-left: 10px;
-}
+} => gap */
 
-.subscribe-btn,
-.message-btn {
-  color: white;
-  background-color: var(--main-blue-color);
+#painty_root {
   border: none;
-  border-radius: 20px;
-  padding: 5px 15px;
-}
-
-.subscribe-btn + .message-btn {
-  margin-left: 15px;
-}
-
-.social-count-list {
-  font-size: 0;
-}
-
-.social-counts {
-  display: inline-block;
-  padding: 0 10px;
-  font-size: 1rem;
-}
-
-.social-counts + .social-counts {
-  border-left: 1px solid gray;
 }
