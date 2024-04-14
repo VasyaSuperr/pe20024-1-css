@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  --main-blue-color: hsl(224deg 89.11% 60.39%);
+  --user-photo-size: 100px;
+}
+
 body {
   font-family: sans-serif;
   background-color: antiquewhite;
@@ -20,17 +25,17 @@ body {
 }
 
 .blue-bg {
-  background-color: hsl(224deg 89.11% 60.39%);
-  height: 100px;
+  background-color: var(--main-blue-color);
+  height: var(--user-photo-size);
 }
 
 .user-photo-wrapper {
-  width: 100px;
-  height: 100px;
+  width: var(--user-photo-size);
+  height: var(--user-photo-size);
   border-radius: 50%;
-  margin-top: -75px;
+  margin-top: calc(var(--user-photo-size) * -3 / 4);
   overflow: hidden;
-  border: 2px hsl(224deg 89.11% 60.39%) solid;
+  border: 2px var(--main-blue-color) solid;
   display: inline-block;
 }
 
@@ -85,7 +90,7 @@ p,
 .subscribe-btn,
 .message-btn {
   color: white;
-  background-color: #4070f4;
+  background-color: var(--main-blue-color);
   border: none;
   border-radius: 20px;
   padding: 5px 15px;
