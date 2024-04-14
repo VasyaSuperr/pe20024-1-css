@@ -33,3 +33,13 @@ div {
 #painty_root {
   border: none;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  gap: 10px;
+}
