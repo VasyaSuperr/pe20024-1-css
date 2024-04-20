@@ -2,44 +2,57 @@
   box-sizing: border-box;
 }
 
-/* ----- flex-container ----- */
-section {
-  /* common css */
-  border: 2px solid green;
-  padding: 5px;
-  /* flex-properties */
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+body {
+  padding: 10px;
 }
 
-/* ----- flex-child ----- */
-div {
-  /* common css */
-  border: 2px solid blue;
-  padding: 5px;
-
-  /* flex-properties */
-}
-
-.Logo {
-  margin-right: auto;
-}
-
-/* div + div {
-  margin-left: 10px;
-} => gap */
-
-#painty_root {
-  border: none;
-}
-
-header {
+.user-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  min-width: 280px;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 0 10px purple;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.edit-btn {
+  align-self: flex-end;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: purple;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.membership-section {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.social-links-list {
+  display: flex;
+  gap: 15px;
+}
+
+.social-lnk {
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 10px;
-  height: 500px;
+  color: inherit;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 50%;
 }
