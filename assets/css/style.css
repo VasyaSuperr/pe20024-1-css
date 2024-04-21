@@ -54,9 +54,16 @@ body {
   border-radius: 50%;
 }
 
-p {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
+/* sticky */
+.child:nth-child(5) {
+  position: sticky;
+}
+
+section {
+  height: 500px;
+  border: 2px solid red;
+}
+h2 {
+  position: sticky;
+  top: 0;
 }
