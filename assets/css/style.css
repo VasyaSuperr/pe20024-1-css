@@ -3,67 +3,70 @@
 }
 
 body {
-  font-size: 1.5em;
+  padding: 20px;
+  font-family: sans-serif;
 }
 
-.container {
-  border: 5px solid green;
+article {
+  min-width: 250px;
+  max-width: 350px;
+  width: 100%;
+  padding: 30px;
+  background-image: linear-gradient(to left, #ff6699 0%, #ffcc99 100%);
+  border-radius: 4px;
+  color: white;
+  overflow: hidden;
   position: relative;
 }
 
-.child {
-  border: 5px solid blue;
+.first-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.count {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1em 0 2em;
+}
+
+/* .circle {
+  position: absolute;
+  right: -20px;
+  bottom: -70px;
   width: 150px;
   height: 150px;
-  background-color: azure;
-}
-
-/* static - default */
-.child:nth-child(1) {
-  position: static;
-}
-
-/* relative - лишається місце в потоці, 
-позиціонується  відносно свого місця в потоці */
-.child:nth-child(2) {
-  position: relative;
-  /* top, right, bottom, left */
-  /* bottom: 50px; */
-  /* left: 50px; */
-  /* z-index: 1; */
-}
-
-/* absolute 
-не лишається місце в потоці 
-позиціонується відносно найближчого предка в якому є position*/
-.child:nth-child(3) {
-  position: absolute;
-  background-color: yellow;
-  /* z-index: -1; */
-  bottom: 50%;
-  left: 100px;
-}
-
-/* fixed 
-не лишається місце в потоці 
-позиціонується відносно в'юпорта*/
-.child:nth-child(4) {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+} */
+
+/* .circle-1 {
+  position: absolute;
+  right: -70px;
+  top: -30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+} */
+
+/* DRY - принцип (Dry don't repeat your self) */
+article::after,
+article::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* sticky */
-.child:nth-child(5) {
-  position: sticky;
+article::before {
+  right: -20px;
+  bottom: -70px;
 }
 
-section {
-  height: 500px;
-  border: 2px solid red;
-}
-h2 {
-  position: sticky;
-  top: 0;
+article::after {
+  right: -70px;
+  top: -30px;
 }
